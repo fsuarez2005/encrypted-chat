@@ -1,0 +1,53 @@
+# Frank Suarez
+# Makefile for COSC 439 Project
+
+CC = g++
+FIND = find
+
+BIN := fs_TCPServerMT fs_TCPClientMT
+
+SOURCES := $(wildcard *.cpp)
+
+LDLIBS := -pthread
+
+CPPFLAGS += -g
+
+DEPENDFILE = fs_depend
+
+#CPPFLAGS += -Wall
+
+# ======================================
+
+all: $(BIN)
+
+fs_TCPServerMT: fs_TCPServerMT.o fs_socket.o fs_timer.o
+
+fs_TCPClientMT: fs_TCPClientMT.o fs_socket.o
+
+# ======================================
+
+depend: $(DEPENDFILE)
+
+
+# generates dependencies
+$(DEPENDFILE): $(SOURCES)
+	$(CC) -M $(CPPFLAGS) $^ > $@
+
+include $(DEPENDFILE)
+
+# ======================================
+
+clean: cleanbin cleandepend cleanobjects cleanbak
+
+cleanbin:
+	$(RM) $(BIN)
+
+cleandepend:
+	$(RM) $(DEPENDFILE)
+
+cleanobjects:
+	$(FIND) -iname "*.o" -delete
+
+cleanbak:
+	$(RM) *~
+	$(RM) *.bak
