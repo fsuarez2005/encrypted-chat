@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D58AED142A885CDE0067043A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D58AED132A885CDE0067043A /* main.cpp */; };
-		D58AED3E2A885DFF0067043A /* fs_TCPServerMT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D58AED2E2A885DFE0067043A /* fs_TCPServerMT.cpp */; };
-		D58AED3F2A885DFF0067043A /* fs_socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D58AED2F2A885DFE0067043A /* fs_socket.cpp */; };
-		D58AED402A885DFF0067043A /* fs_TCPClientMT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D58AED312A885DFE0067043A /* fs_TCPClientMT.cpp */; };
-		D58AED412A885DFF0067043A /* fs_timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D58AED322A885DFE0067043A /* fs_timer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,20 +25,6 @@
 /* Begin PBXFileReference section */
 		D58AED102A885CDE0067043A /* encrypted-chat */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "encrypted-chat"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58AED132A885CDE0067043A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		D58AED2E2A885DFE0067043A /* fs_TCPServerMT.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fs_TCPServerMT.cpp; sourceTree = "<group>"; };
-		D58AED2F2A885DFE0067043A /* fs_socket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fs_socket.cpp; sourceTree = "<group>"; };
-		D58AED312A885DFE0067043A /* fs_TCPClientMT.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fs_TCPClientMT.cpp; sourceTree = "<group>"; };
-		D58AED322A885DFE0067043A /* fs_timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fs_timer.cpp; sourceTree = "<group>"; };
-		D58AED332A885DFE0067043A /* fs_macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fs_macros.h; sourceTree = "<group>"; };
-		D58AED342A885DFE0067043A /* fs_socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fs_socket.h; sourceTree = "<group>"; };
-		D58AED352A885DFE0067043A /* fs_TCPClientMT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fs_TCPClientMT.h; sourceTree = "<group>"; };
-		D58AED362A885DFE0067043A /* fs_diffie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fs_diffie.h; sourceTree = "<group>"; };
-		D58AED372A885DFE0067043A /* fs_thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fs_thread.h; sourceTree = "<group>"; };
-		D58AED392A885DFF0067043A /* fs_TCPServerMT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fs_TCPServerMT.h; sourceTree = "<group>"; };
-		D58AED3A2A885DFF0067043A /* fs_lock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fs_lock.h; sourceTree = "<group>"; };
-		D58AED3B2A885DFF0067043A /* fs_xor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fs_xor.h; sourceTree = "<group>"; };
-		D58AED3D2A885DFF0067043A /* fs_timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fs_timer.h; sourceTree = "<group>"; };
-		D58AED422A885F160067043A /* endian.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = endian.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +41,6 @@
 		D58AED072A885CDE0067043A = {
 			isa = PBXGroup;
 			children = (
-				D58AED422A885F160067043A /* endian.h */,
 				D58AED122A885CDE0067043A /* encrypted-chat */,
 				D58AED112A885CDE0067043A /* Products */,
 			);
@@ -76,19 +57,6 @@
 		D58AED122A885CDE0067043A /* encrypted-chat */ = {
 			isa = PBXGroup;
 			children = (
-				D58AED362A885DFE0067043A /* fs_diffie.h */,
-				D58AED3A2A885DFF0067043A /* fs_lock.h */,
-				D58AED332A885DFE0067043A /* fs_macros.h */,
-				D58AED2F2A885DFE0067043A /* fs_socket.cpp */,
-				D58AED342A885DFE0067043A /* fs_socket.h */,
-				D58AED312A885DFE0067043A /* fs_TCPClientMT.cpp */,
-				D58AED352A885DFE0067043A /* fs_TCPClientMT.h */,
-				D58AED2E2A885DFE0067043A /* fs_TCPServerMT.cpp */,
-				D58AED392A885DFF0067043A /* fs_TCPServerMT.h */,
-				D58AED372A885DFE0067043A /* fs_thread.h */,
-				D58AED322A885DFE0067043A /* fs_timer.cpp */,
-				D58AED3D2A885DFF0067043A /* fs_timer.h */,
-				D58AED3B2A885DFF0067043A /* fs_xor.h */,
 				D58AED132A885CDE0067043A /* main.cpp */,
 			);
 			path = "encrypted-chat";
@@ -151,11 +119,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D58AED3E2A885DFF0067043A /* fs_TCPServerMT.cpp in Sources */,
 				D58AED142A885CDE0067043A /* main.cpp in Sources */,
-				D58AED412A885DFF0067043A /* fs_timer.cpp in Sources */,
-				D58AED402A885DFF0067043A /* fs_TCPClientMT.cpp in Sources */,
-				D58AED3F2A885DFF0067043A /* fs_socket.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
