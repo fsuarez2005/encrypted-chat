@@ -1,0 +1,29 @@
+Doxyfile
+	Probaby don't need. Only for Doxygen documentation.
+
+
+fs_Makefile
+	Maybe, should use Xcode as build system.
+
+
+fs_Readme.txt
+
+
+
+fs_TCPClientMT.cpp
+	
+
+
+
+fs_TCPClientMT.h
+fs_TCPServerMT.cpp
+fs_TCPServerMT.h
+fs_diffie.h
+fs_lock.h
+fs_macros.h
+fs_socket.cpp
+fs_socket.h
+fs_thread.h
+fs_timer.cpp
+fs_timer.h
+fs_xor.h
