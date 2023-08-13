@@ -6,7 +6,7 @@
 #ifndef FS_SOCKET_H
 #define FS_SOCKET_H
 
-using namespace std;
+
 
 #include <iostream>
 #include <exception>
@@ -20,12 +20,15 @@ using namespace std;
 #include <errno.h>
 
 #include <sys/types.h>
-#include <endian.h>
+
 #include <arpa/inet.h>
 #include <sys/types.h>
 #include <netdb.h>
 #include <sys/socket.h>
 
+using namespace std;
+
+#include "endian.h"
 #include "fs_lock.h"
 #include "fs_macros.h"
 
