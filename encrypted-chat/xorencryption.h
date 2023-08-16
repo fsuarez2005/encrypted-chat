@@ -5,16 +5,16 @@
 
 using namespace std;
 
-#include <iostream>
-#include <sstream>
+//#include <iostream>
+//#include <sstream>
 #include <string>
 
-#include <cstdlib>
-#include <cstdio>
-#include <cstring>
-#include <cmath>
-#include <cfloat>
-#include <climits>
+//#include <cstdlib>
+//#include <cstdio>
+//#include <cstring>
+//#include <cmath>
+//#include <cfloat>
+//#include <climits>
 
 
 class xor_cipher {
