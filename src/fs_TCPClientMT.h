@@ -2,7 +2,7 @@
  ** \brief chat client
  **/
 
-
+using namespace std;
 
 #include <cstdlib>
 #include <cstdio>
@@ -18,8 +18,6 @@
 #include <exception>
 #include <iostream>
 #include <sstream>
-
-using namespace std;
 
 #include "fs_macros.h"
 #include "fs_socket.h"
