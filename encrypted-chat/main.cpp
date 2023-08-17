@@ -9,7 +9,7 @@
 
 using namespace std;
 
-#include "xorencryption.h"
+//#include "xorencryption.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...

@@ -46,9 +46,7 @@ class xor_cipher {
         void set_key(char key);
         // -------------------------------------------------
         /// get current text
-        string get_string() {
-        return buffer;
-        }
+        string get_string();
         // -------------------------------------------------
         /// appends to encrypted buffer
         xor_cipher& operator<<(const string & message);
