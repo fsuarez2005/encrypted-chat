@@ -1,7 +1,15 @@
+/**
+ XOR Cipher
+ https://en.wikipedia.org/wiki/XOR_cipher
+ 
+ 
+ 
+ 
+ 
+ 
+ */
 
 
-
-#include <iostream>
 
 
 using namespace std;

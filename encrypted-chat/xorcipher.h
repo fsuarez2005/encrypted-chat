@@ -3,14 +3,15 @@
  **/
 
 #include <string>
+#include <iostream>
 
 using namespace std;
 
 
 
 
-#ifndef XORCIPHER_H
-#define XORCIPHER_H
+#ifndef xorcipher_h
+#define xorcipher_h
 
 class xor_cipher {
     private:
