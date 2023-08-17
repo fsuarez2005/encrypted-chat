@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D572E6612A8981F7006802F7 /* xorencryption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D572E6602A8981F7006802F7 /* xorencryption.cpp */; };
 		D58AED142A885CDE0067043A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D58AED132A885CDE0067043A /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -24,8 +23,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D572E65F2A8981F7006802F7 /* xorencryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xorencryption.h; sourceTree = "<group>"; };
-		D572E6602A8981F7006802F7 /* xorencryption.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xorencryption.cpp; sourceTree = "<group>"; };
 		D58AED102A885CDE0067043A /* encrypted-chat */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "encrypted-chat"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58AED132A885CDE0067043A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,8 +57,6 @@
 		D58AED122A885CDE0067043A /* encrypted-chat */ = {
 			isa = PBXGroup;
 			children = (
-				D572E6602A8981F7006802F7 /* xorencryption.cpp */,
-				D572E65F2A8981F7006802F7 /* xorencryption.h */,
 				D58AED132A885CDE0067043A /* main.cpp */,
 			);
 			path = "encrypted-chat";
@@ -124,7 +119,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D572E6612A8981F7006802F7 /* xorencryption.cpp in Sources */,
 				D58AED142A885CDE0067043A /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
