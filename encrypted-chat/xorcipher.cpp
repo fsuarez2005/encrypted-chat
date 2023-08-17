@@ -1,24 +1,39 @@
 
 
-//#include <iostream>
-//#include <sstream>
-//#include <string>
 
-//#include <cstdlib>
-//#include <cstdio>
-//#include <cstring>
-//#include <cmath>
-//#include <cfloat>
-//#include <climits>
+#include <iostream>
+
 
 using namespace std;
 
-#include "xorencryption.h"
+#include "xorcipher.h"
 
-xor_cipher::xor_cipher() : key_offset{0}, buffer{""}, key{""} {}
+// =============================================
+
+
+
+xor_cipher::xor_cipher() :
+    key_offset{0},
+    buffer{""},
+    key{""} {}
 
 xor_cipher::~xor_cipher() {}
 
+
+// =============================================
+
+
+
+void xor_cipher::encrypt_new(const string message, const string key) {
+    
+    
+    
+    
+}
+
+
+
+// =============================================
 
 size_t xor_cipher::encrypt(  char * dest,
                         const char * message,
