@@ -7,6 +7,7 @@ package encryptedchat;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -42,6 +43,7 @@ public class XorCipherTest {
     @Test
     public void testTransformInt() {
         System.out.println("transformInt");
+        
         int n = Integer.parseUnsignedInt("1010", 2);
         int key = Integer.parseUnsignedInt("1001", 2);
         int expResult = Integer.parseUnsignedInt("11", 2);
@@ -51,7 +53,36 @@ public class XorCipherTest {
         System.out.printf("key\t= %16s%n",Integer.toBinaryString(key));
         System.out.printf("result\t= %16s%n",Integer.toBinaryString(result));
         assertEquals(expResult, result);
+    }
 
+    /**
+     * Test of transformByte method, of class XorCipher.
+     */
+    @Test
+    public void testTransformByte() {
+        System.out.println("transformByte");
+        byte n = Byte.parseByte("00011010",2);
+        byte key = Byte.parseByte("00101001",2);
+        byte expResult = Byte.parseByte("110011", 2);
+        byte result = XorCipher.transformByte(n, key);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of transformChar method, of class XorCipher.
+     */
+    @Test
+    public void testTransformChar() {
+        System.out.println("transformChar");
+        char c = ' ';
+        char key = ' ';
+        char expResult = ' ';
+        char result = XorCipher.transformChar(c, key);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
     
 }

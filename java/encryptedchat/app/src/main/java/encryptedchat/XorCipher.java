@@ -9,6 +9,12 @@ package encryptedchat;
  * @author franksuarez
  */
 public class XorCipher {
+    
+    public static byte transformByte(byte n, byte key) {
+        return (byte) (n ^ key);
+    }
+    
+    
     public static int transformInt(int n, int key) {
         return n ^ key;
     }
