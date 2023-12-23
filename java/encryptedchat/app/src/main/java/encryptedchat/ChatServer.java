@@ -52,7 +52,6 @@ public class ChatServer {
         
         Connection clientConnection = new Connection();
         
-        
         ConnectionHandler handler = new ConnectionHandler();
         handler.setConnection(clientConnection);
         
