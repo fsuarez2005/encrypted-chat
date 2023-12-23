@@ -84,5 +84,49 @@ public class XorCipherTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+
+    /**
+     * Test of repeatedKey method, of class XorCipher.
+     */
+    @Test
+    public void testRepeatedKey() {
+        System.out.println("repeatedKey");
+        String key = "fox";
+        int messageLength = 10;
+        String expResult = "foxfoxfoxf";
+        String result = XorCipher.repeatedKey(key, messageLength);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of repeatKeyBytes method, of class XorCipher.
+     */
+    @Test
+    public void testRepeatKeyBytes() {
+        System.out.println("repeatKeyBytes");
+        byte[] key = {'a','b','c','d','e'};
+        int messageLength = 5*5;
+        byte[] result = XorCipher.repeatKeyBytes(key, messageLength);
+        System.out.printf("%s%n",new String(result));
+        
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+    
+    
+    @Test
+    public void ctestRepeatKeyByteString() {
+        System.out.println("repeatKeyBytes");
+        String keyString = "hello";
+        byte[] keyBytes = keyString.getBytes();
+        System.out.printf("num bytes = %d%n",keyBytes.length);
+        int messageLength = keyString.length()*5+2;
+        byte[] result = XorCipher.repeatKeyBytes(keyString.getBytes(), messageLength);
+        System.out.printf("%s%n",new String(result));
+        
+    }
+
     
 }
