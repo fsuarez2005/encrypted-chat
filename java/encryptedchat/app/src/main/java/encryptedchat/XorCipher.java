@@ -1,7 +1,31 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+# TODO:
+- [] Standardize message data type
+- [] Standardize key data type
+- [x] Implement a stateful xor cipher class
+- [] 
+
+
+
+
+Message data types
+* String
+ * Easy to use
+ * Can be converted to other data types
+ * getButes just downcasts char to 1 byte. it does not 
+* char[]
+ * Similar to String
+ * Due to character encoding, char size may be different
+* byte[]
+ * Conversion needs to be portable
+ * The most consistent
+
+The message and the key should be of the same character set and have the
+same byte order. 
+
+
+*/
+
 package encryptedchat;
 
 /**
@@ -9,49 +33,40 @@ package encryptedchat;
  * @author franksuarez
  */
 public class XorCipher {
-    
-    public static byte[] repeatKeyBytes(byte[] key, int messageLength) {
-        int iterations = messageLength / key.length;
-        int extra = messageLength % key.length;
-        
-        byte[] newKey = new byte[messageLength];
-        
-        for(int n = 0; n < iterations; n++) {
-            System.arraycopy(key, 0, newKey, key.length * n, key.length);
-        }
-        
-        
-        // extra calculation
-        // start = key.length * iterations
-        System.arraycopy(key, 0, newKey, key.length*iterations, extra);
-        
-        return newKey;
+    String key;
+    int keyOffset;
+
+    public void newMessage() {
+        this.keyOffset = 0;
     }
     
-    /**
-     * Repeat the String key for the messageLength
-     * @param key
-     * @param messageLength
+    public String encode(String message) {
+        return transform(message);
+    }
+    
+    public String decode(String message) {
+        return transform(message);
+    }
+    
+    
+    /** 
+     * 
+     * 
+     * @param message
      * @return 
      */
-    public static String repeatedKey(String key, int messageLength) {
-        int iterations = messageLength / key.length();
-        int extra = messageLength % key.length();
-        String newKey = key.repeat(iterations) + key.substring(0, extra);
-        return newKey;
+    private String transform(String message) {
+        // encode message with key
+        // return encoded message
+        // store key offset
+        String output = "";
+        
+        for(int n = 0; n < message.length(); n++) {
+            output += (char) (message.charAt(n) ^ this.key.charAt((n+this.keyOffset) % this.key.length()));
+        }
+        
+        this.keyOffset = message.length() % this.key.length();
+        return output;
     }
-    
-    
-    public static byte transformByte(byte n, byte key) {
-        return (byte) (n ^ key);
-    }
-    
-    
-    public static int transformInt(int n, int key) {
-        return n ^ key;
-    }
-    
-    public static char transformChar(char c, char key) {
-        return ' ';
-    }
+
 }
