@@ -9,6 +9,19 @@ package encryptedchat;
  * @author franksuarez
  */
 public class DiffieHellman {
+    // https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange
+    // sharedModulus (p)
+    // sharedBase (g)
+    // mySecret (a)
+    // send other A = g^a mod p
+    //      A = (sharedModulus^secret mod sharedBase)
+    // get B = (sharedModulus^othersSecret mod sharedBase) from other
+    // sharedSecret = B^A mod P
+    //      othersSecret^mySecret mod sharedBase
+    // other will compute sharedSecret with 
+    //      A^B mod p
+    // 
+    
     int g;
     int n;
     int gxn; // server's g^x %n
