@@ -49,8 +49,21 @@ public class Utility {
     }
     
     // todo
-    public static void primitiveRootModuloN(double g, double n) {
-        throw new UnsupportedOperationException();
+    public static boolean primitiveRootModuloN(int g, int n) {
+        boolean out = true;
+
+        int nTotient = eulerTotient(n);
+        ArrayList<Integer> factors = integerFactorization(nTotient);
+
+        for(int index = 0; index < factors.size(); index++) {
+            int gPower = (int) Math.pow((double)g, (double)nTotient/factors.get(index));
+            int gPowerN = gPower % n;
+            
+            out = (gPowerN == 1);
+           
+        }
+        
+        return out;
     }
     
     public static boolean congruence(int a, int b, int modulo) {
