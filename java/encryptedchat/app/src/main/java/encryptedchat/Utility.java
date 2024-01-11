@@ -22,16 +22,39 @@ public class Utility {
         return out;
     }
     
-    // todo
-    public void primitiveRootModuloN(double g, double n) {
+    public static void isPrimitiveRootModuloN(int g, int n) {
+        throw new UnsupportedOperationException();
+    }
+    
+    public static ArrayList<Integer> generateCoprimeList(int value) {
+        ArrayList<Integer> out = new ArrayList<>();
         
-        for (double k = 1; k <= n; k++) {
-            double gk = java.lang.Math.pow(g, k);
-            
-            System.out.printf("gk = %f%n",gk);
+        for (int n = 2; n <= value - 1; n++) {
+            if (isCoprime(n,value)){
+                out.add(n);
+            }
         }
-        
-        
+        return out;
+    }
+    
+    
+    /** Returns true if two integers are coprime.
+     * 
+     * @param a
+     * @param b
+     * @return 
+     */
+    public static boolean isCoprime(int a, int b) {
+        return Utility.greatestCommonDivisor(a, b) == 1;
+    }
+    
+    // todo
+    public static void primitiveRootModuloN(double g, double n) {
+        throw new UnsupportedOperationException();
+    }
+    
+    public static boolean congruence(int a, int b, int modulo) {
+        return (a % modulo == b % modulo);
     }
     
     
@@ -40,7 +63,7 @@ public class Utility {
      * @param n
      * @return 
      */
-    public static ArrayList<Integer> integerFactorizationFast(int n) {
+    public static ArrayList<Integer> integerFactorization(int n) {
         ArrayList<Integer> a = new ArrayList<>();
         int f = 3;
         
@@ -62,29 +85,7 @@ public class Utility {
         }
         return a;
     }
-    
-    /**
-     * https://en.wikipedia.org/wiki/Trial_division
-     * @param n
-     * @return 
-     */
-    public static ArrayList<Integer> integerFactorization(int n) {
-        ArrayList<Integer> a = new ArrayList<>();
-        int f = 2;
-        
-        while (n > 1) {
-            if (n % f == 0) {
-                a.add(f);
-                n /= f;
-                
-            } else {
-                
-                f += 1;
-            }
-            
-        }
-        return a;
-    }
+
     
     /** Returns Greatest Common Divisor using Euclid's algorithm.
      * https://en.wikipedia.org/wiki/Euclidean_algorithm
@@ -120,5 +121,26 @@ public class Utility {
         }
         
         return output;
+    }
+    
+    /** Euler's Totient function.
+     * 
+     * 
+     * 
+     * @param value
+     * @return
+     * @see isCoprime
+     * 
+     */
+    public static int eulerTotient(int value) {
+        int count = 0;
+        
+        for(int index = 1; index < value; index++) {
+            if (isCoprime(value, index)) {
+                count++;
+            }
+            
+        }
+        return count;
     }
 }
